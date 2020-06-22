@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,123 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5VA-s7-KwG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="1DM-AQ-2Oc">
+                                        <rect key="frame" x="30" y="40" width="354" height="447"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fne-XF-0a1">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RLa-Fl-LiM">
+                                                <rect key="frame" x="0.0" y="88" width="354" height="91.333333333333314"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height in CM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9L-ww-17M">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="38.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vCM-6K-1lf">
+                                                        <rect key="frame" x="0.0" y="43.333333333333343" width="354" height="48"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9zR-YM-NH3">
+                                                <rect key="frame" x="0.0" y="224.33333333333334" width="354" height="91.333333333333343"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight in KG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azm-RF-UvU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="38.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sGe-hs-HVz">
+                                                        <rect key="frame" x="0.0" y="43.333333333333371" width="354" height="48"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hRp-dV-wgX">
+                                                <rect key="frame" x="0.0" y="360.66666666666669" width="354" height="86.333333333333314"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJS-FV-dv5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="43"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="36"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7E-HK-fxg">
+                                                        <rect key="frame" x="0.0" y="48" width="354" height="38.333333333333343"/>
+                                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.054741010273972601" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="e7z-yq-Y1s" appends="YES" id="c8x-9q-skd"/>
+                                        </connections>
+                                    </stackView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1DM-AQ-2Oc" secondAttribute="bottom" constant="224" id="EsE-d5-LMk"/>
+                                    <constraint firstItem="1DM-AQ-2Oc" firstAttribute="width" secondItem="5VA-s7-KwG" secondAttribute="width" multiplier="0.855072" id="JrO-qo-Dmi"/>
+                                    <constraint firstItem="1DM-AQ-2Oc" firstAttribute="top" secondItem="5VA-s7-KwG" secondAttribute="top" constant="40" id="TTS-VW-M2v"/>
+                                    <constraint firstItem="1DM-AQ-2Oc" firstAttribute="leading" secondItem="5VA-s7-KwG" secondAttribute="leading" constant="30" id="s7E-TX-8nI"/>
+                                    <constraint firstAttribute="trailing" secondItem="1DM-AQ-2Oc" secondAttribute="trailing" constant="30" id="srP-Pd-KLb"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="r99-86-JgT"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5Q2-PP-qcc"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4EF-J6-dOP" appends="YES" id="L3z-V4-NMX"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5VA-s7-KwG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KWy-gE-Gvd"/>
+                            <constraint firstItem="5VA-s7-KwG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Y0S-8Z-fmD"/>
+                            <constraint firstItem="5VA-s7-KwG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eDG-7V-dhD"/>
+                            <constraint firstItem="5VA-s7-KwG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jQn-Ri-HcD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bmiHeightTxtField" destination="vCM-6K-1lf" id="4yk-vt-s1e"/>
+                        <outlet property="bmiResultLabel" destination="M7E-HK-fxg" id="s4j-de-gt2"/>
+                        <outlet property="bmiWeightTxtField" destination="sGe-hs-HVz" id="eiA-i2-OB0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4EF-J6-dOP">
+                    <connections>
+                        <action selector="hideKB:" destination="BYZ-38-t0r" id="eXk-TZ-ja4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="e7z-yq-Y1s">
+                    <connections>
+                        <action selector="hideKB:" destination="BYZ-38-t0r" id="IQn-V1-uuv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.58695652173915"/>
         </scene>
     </scenes>
 </document>
